@@ -1,0 +1,42 @@
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Agregar Grupo</h3>
+      </div>
+      <div class="card-body">
+        <form action="" >
+            <div class="form-group">
+              <label for="">ID:</label>
+              <input type="text" class="form-control" [(ngModel)]="grupoForm.id" name="id"/>
+            </div>
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input type="text" class="form-control" [(ngModel)]="grupoForm.nombre" name="nombre"/>
+            </div>
+            <button (click)="guardarGrupo()"class="btn btn-danger">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Listado grupos</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th>ID</th>
+              <th>NOMBRE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let grupo of grupos" class="text-center">
+              <td>{{grupo.id}}</td>
+              <td>{{grupo.nombre}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
